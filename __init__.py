@@ -11,6 +11,10 @@ app = Flask(__name__)
 def mapagecontact():
     return render_template("contact.html")
 
+@app.route("/commits/")
+def mescommits():
+    return render_template("commits.html")
+
 @app.route('/tawarano/')
 def meteo():
     response = urlopen('https://samples.openweathermap.org/data/2.5/forecast?lat=0&lon=0&appid=xxx')
